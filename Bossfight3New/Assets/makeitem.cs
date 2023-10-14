@@ -17,14 +17,15 @@ public class makeitem : MonoBehaviour
     {
         timepassed += Time.deltaTime;
 
+        
+        if (ItemToTheRight())
+        {
+            timepassed = -5;
+        }
         if (timepassed >= spawnspeed)
         {
             Spawn();
             timepassed = 0;
-        }
-        if (ItemToTheRight())
-        {
-            Debug.Log("hitt");
         }
     }
     void Spawn()
@@ -40,10 +41,12 @@ public class makeitem : MonoBehaviour
         // Check if the ray hits something
         if (hit.collider != null)
         {
+            
             // If it hits an item, return true (there is an item to the right)
             if (hit.collider.CompareTag("item"))
             {
                 return true;
+                
             }
         }
 

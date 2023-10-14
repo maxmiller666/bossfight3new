@@ -6,6 +6,7 @@ TagManager:
   tags:
   - conveyer
   - item
+  - ground
   layers:
   - Default
   - TransparentFX
