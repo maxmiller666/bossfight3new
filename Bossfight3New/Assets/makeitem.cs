@@ -20,7 +20,7 @@ public class makeitem : MonoBehaviour
         
         if (ItemToTheRight())
         {
-            timepassed = -5;
+            timepassed = 0;
         }
         if (timepassed >= spawnspeed)
         {
