@@ -12,17 +12,13 @@ public class Money : MonoBehaviour
     void Start()
     {
         money = PlayerPrefs.GetInt("amount");
+        money = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetButtonDown("Fire1"))
-        {
-            money += 1;
-            PlayerPrefs.SetInt("amount", money);
-        }
-
         text.text = "" + money;
+        
     }
 }
