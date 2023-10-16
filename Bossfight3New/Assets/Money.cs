@@ -5,20 +5,19 @@ using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
-    public int money;
+    public int money = 50;
     public Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        money = PlayerPrefs.GetInt("amount");
-        money = 50;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = "" + money;
+        text.text = "MONEY : " + money;
         
     }
 }
