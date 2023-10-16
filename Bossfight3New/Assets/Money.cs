@@ -11,14 +11,29 @@ public class Money : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        money = PlayerPrefs.GetInt("amount");
+
         money = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
-        text.text = "" + money;
-        
+
+        text.text = "Money: " + money;
+
+        if (Input.GetButtonDown("Fire1"))
+            if (money - 10 < 0)
+        {
+            Debug.Log("you got no money bro");
+        }
+
+        else
+        {
+            money -= 10;
+        }
     }
+
+      
 }
+
+
