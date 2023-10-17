@@ -7,6 +7,8 @@ TagManager:
   - conveyer
   - item
   - ground
+  - c1
+  - seller
   layers:
   - Default
   - TransparentFX
