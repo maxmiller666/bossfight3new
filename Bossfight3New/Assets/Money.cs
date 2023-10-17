@@ -8,16 +8,20 @@ public class Money : MonoBehaviour
     public int money;
     public Text text;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
 
+
         money = 50;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
 
         text.text = "Money: " + money;
 
@@ -31,6 +35,9 @@ public class Money : MonoBehaviour
         {
             money -= 10;
         }
+
+        text.text = "MONEY : " + money;
+        
     }
 
       

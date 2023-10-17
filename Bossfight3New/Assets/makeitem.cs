@@ -18,10 +18,7 @@ public class makeitem : MonoBehaviour
         timepassed += Time.deltaTime;
 
         
-        if (ItemToTheRight())
-        {
-            timepassed = -5;
-        }
+
         if (timepassed >= spawnspeed)
         {
             Spawn();
@@ -30,19 +27,25 @@ public class makeitem : MonoBehaviour
     }
     void Spawn()
     {
-        Vector3 spawnPosition = transform.position + new Vector3(1, 0, 0);
-        GameObject newItem = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        Vector3 spawnPosition = transform.position + Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * new Vector3(1, 0, 0);
+
+        if (!ItemToTheRight())
+        {
+            GameObject newItem = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
+        }
     }
     bool ItemToTheRight()
     {
-        // Cast a ray to the right
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 2);
 
-        // Check if the ray hits something
+        Vector3 rayDirection = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * Vector2.right;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 2);
+
+
+
         if (hit.collider != null)
         {
             
-            // If it hits an item, return true (there is an item to the right)
+
             if (hit.collider.CompareTag("item"))
             {
                 return true;
@@ -50,7 +53,7 @@ public class makeitem : MonoBehaviour
             }
         }
 
-        // No item to the right
+
         return false;
     }
 }
