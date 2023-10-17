@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 5587974933546877366}
   - component: {fileID: 2182263380820621646}
   - component: {fileID: 8124680422348340914}
+  - component: {fileID: -172639695036810651}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: conveyer
@@ -472,6 +473,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0112023, y: 1.0075183}
   m_EdgeRadius: 0
+--- !u!114 &-172639695036810651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676492972990223255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c2c6d5150884feca80e7180eeaef24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7462217295697280749
 GameObject:
   m_ObjectHideFlags: 0

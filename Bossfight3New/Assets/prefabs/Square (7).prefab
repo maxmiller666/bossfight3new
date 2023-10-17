@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4498786728200442794}
   - component: {fileID: 3341408503526516628}
   - component: {fileID: 6201771604717586570}
+  - component: {fileID: -3655513087536195780}
   m_Layer: 0
   m_Name: Square (7)
   m_TagString: Untagged
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 6205646751711927507, guid: 22f084f5f7497454c85ba63cdbfe4edd, type: 3}
   spawnspeed: 0.7
+--- !u!114 &-3655513087536195780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582371489334466101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c2c6d5150884feca80e7180eeaef24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1962584464596588193
 GameObject:
   m_ObjectHideFlags: 0
