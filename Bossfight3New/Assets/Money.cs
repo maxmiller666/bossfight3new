@@ -5,19 +5,42 @@ using UnityEngine.UI;
 
 public class Money : MonoBehaviour
 {
-    public int money = 50;
+    public int money;
     public Text text;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
+
+
+        money = 50;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+        text.text = "Money: " + money;
+
+        if (Input.GetButtonDown("Fire1"))
+            if (money - 10 < 0)
+        {
+            Debug.Log("you got no money bro");
+        }
+
+        else
+        {
+            money -= 10;
+        }
+
         text.text = "MONEY : " + money;
         
     }
+
+      
 }
+
+
