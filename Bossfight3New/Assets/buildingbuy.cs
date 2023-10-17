@@ -7,6 +7,7 @@ public class buildingbuy : MonoBehaviour
 {
     public GameObject[] objects;
     public GameObject pendingObject;
+    
 
 
     private Vector3 pos;
@@ -17,7 +18,7 @@ public class buildingbuy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -28,10 +29,15 @@ public class buildingbuy : MonoBehaviour
             pendingObject.transform.position = pos;
 
             if(Input.GetMouseButton(0))
-            {
-                PlaceObject();
-            }
+           
+                { 
+                    PlaceObject();
+                   
+                }
+
+          
         }
+
     }
 
     public void PlaceObject()
