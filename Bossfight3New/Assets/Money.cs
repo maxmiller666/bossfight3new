@@ -11,10 +11,6 @@ public class Money : MonoBehaviour
     
     void Start()
     {
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 900533c (glitchy button)
 
 
         money = 50;
@@ -28,11 +24,6 @@ public class Money : MonoBehaviour
 
 
         text.text = "Money: " + money;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 900533c (glitchy button)
         if (Input.GetButtonDown("Fire1"))
             if (money - 10 < 0)
         {
@@ -45,11 +36,7 @@ public class Money : MonoBehaviour
         }
 
         text.text = "MONEY : " + money;
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of 900533c (glitchy button)
-        
     }
 
       
