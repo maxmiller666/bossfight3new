@@ -37,7 +37,7 @@ public class makeitem : MonoBehaviour
     bool ItemToTheRight()
     {
         Vector3 rayDirection = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * Vector2.right;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 2);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 1);
 
 
 
