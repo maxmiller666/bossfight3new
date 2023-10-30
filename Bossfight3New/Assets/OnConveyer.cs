@@ -73,13 +73,13 @@ public class OnConveyer : MonoBehaviour
         if (other.gameObject.CompareTag("conveyer"))
         {
             num += 1;
-            Debug.Log(num + " Enter " + other);
+            //Debug.Log(num + " Enter " + other);
         }
         if (other.gameObject.CompareTag("c1"))
         {
             turn = true;
             num += 1;
-            Debug.Log(num + " Enter " + other);
+            //Debug.Log(num + " Enter " + other);
         }
         if (other.gameObject.CompareTag("seller"))
         {
@@ -95,17 +95,17 @@ public class OnConveyer : MonoBehaviour
         {
 
             num -= 1;
-            Debug.Log(num+"Exit "+ collision);
+            //Debug.Log(num+"Exit "+ collision);
         }
         if (collision.gameObject.CompareTag("c1"))
         {
             turn = false;
             num -= 1;
-            Debug.Log(num + " Exit " + collision);
+            //Debug.Log(num + " Exit " + collision);
         }
         if (num == 0 && !turn)
         {
-            Debug.Log("death");
+            //Debug.Log("death");
             Destroy(gameObject, 0.3f);
         }
     }

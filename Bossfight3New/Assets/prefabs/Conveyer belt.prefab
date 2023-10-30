@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 8124680422348340914}
   - component: {fileID: -172639695036810651}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Conveyer belt
   m_TagString: conveyer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

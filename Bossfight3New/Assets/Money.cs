@@ -13,7 +13,6 @@ public class Money : MonoBehaviour
     {
 
 
-
         money = 50;
 
     }
@@ -42,7 +41,7 @@ public class Money : MonoBehaviour
 
         }
 
+    // Update is called once per frame
 
-    }
-
-
+      
+}
