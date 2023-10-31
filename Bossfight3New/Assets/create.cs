@@ -9,8 +9,8 @@ public class create : MonoBehaviour
     public GameObject itemPrefab1;
     public string key2;
     public GameObject itemPrefab2;
-    public List<LinkedList<GameObject>> bigboy = new List<LinkedList<GameObject>>();
     int itemNum = 0;
+    public GameObject[,] littleboy = new GameObject[15, 11];
 
     // Start is called before the first frame update
     void Start()
@@ -35,24 +35,23 @@ public class create : MonoBehaviour
         {
             WOW(itemPrefab2);
         }
-        if (Input.GetKeyDown("u"))
+        if (Input.GetKeyDown("m"))
         {
-            int mooo = 0;
-            Debug.Log("LINKED LIST SIZE : " + bigboy.Count);
-            foreach (LinkedList<GameObject> u in bigboy)
+            Debug.Log("\n\n\nAAAAAAAAAAAA\n\n\n");
+            for (int i = 0; i < 14; i++)
             {
-                Debug.Log("Linked List index : " + mooo + "\n");
-                foreach (GameObject k in u)
+                for (int j = 0; j < 10; j++)
                 {
-                    Debug.Log(k.name);
+                    Debug.Log("coordinates " + i + " " + j);
+                    Debug.Log(littleboy[i, j].name);
                 }
-                mooo++;
             }
         }
+
     }
     void WOW(GameObject waa)
     {
-        bool hasfreinds = false;
+
         Vector3 spawnPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); ;
         spawnPosition.z += 10;
         spawnPosition.x = Mathf.Round(spawnPosition.x);
@@ -60,125 +59,14 @@ public class create : MonoBehaviour
         GameObject newItem = Instantiate(waa, spawnPosition, rotae);
         newItem.name = newItem.name + itemNum;
         itemNum++;
-        if (input(newItem, Vector2.left))
-        {
-            hasfreinds = true;
-            Debug.Log("INPUT");
-
-        }
-        else if (input(newItem, Vector2.down))
-        {
-            hasfreinds = true;
-            Debug.Log("RIGHT");
-        }
-        else if (input(newItem, Vector2.up))
-        {
-            hasfreinds = true;
-            Debug.Log("LEFT");
-        }
-        else if (output(newItem))
-        {
-            hasfreinds = true;
-            Debug.Log("OUTPUTT");
-        }
-        if (hasfreinds == false)
-        {
-            
-            nofreinds(newItem);
-            
-        }
-
-
-        newItem.layer = 7;
-
-    }
-    void nofreinds(GameObject woop)
-    {
-
-        bigboy.Add(new LinkedList<GameObject>());
-        int num = bigboy.Count - 1;
-        bigboy[num].AddLast(woop);
-    }
-
-    bool output(GameObject obo)
-    {
-        Vector3 rayDirection = Quaternion.Euler(0, 0, obo.transform.rotation.eulerAngles.z) * Vector2.right;
-        RaycastHit2D hit = Physics2D.Raycast(obo.transform.position, rayDirection, 1, LayerMask.GetMask("build"));
+        Debug.Log(newItem.name + " made");
+        littleboy[(int)spawnPosition.x, (int)spawnPosition.y * -1] = newItem;
+        Debug.Log("little boy");
+        Debug.Log("x "+(int)spawnPosition.x+" and y "+(int)spawnPosition.y * -1);
 
 
 
-        if (hit.collider != null)
-        {
-            Debug.Log(hit.collider);
-            Debug.Log(obo.transform.position);
-            Debug.Log(BBindex(hit.collider));
-            bigboy[BBindex(hit.collider)].AddFirst(obo);
-            return true;
-            
-        }
-
-
-        return false;
-    }
-    bool input(GameObject obo, Vector2 LR )
-    {
-        Vector3 rayDirection = Quaternion.Euler(0, 0, obo.transform.rotation.eulerAngles.z) * LR;
-        RaycastHit2D hit = Physics2D.Raycast(obo.transform.position, rayDirection, 1, LayerMask.GetMask("build"));
-
-
-
-        if (hit.collider != null)
-        {
-            Debug.Log(hit.collider);
-            Debug.Log(obo.transform.position);
-            Debug.Log(BBindex(hit.collider));
-            bigboy[BBindex(hit.collider)].AddLast(obo);
-            int old = BBindex(hit.collider);
-
-            rayDirection = Quaternion.Euler(0, 0, obo.transform.rotation.eulerAngles.z) * Vector2.right;
-            hit = Physics2D.Raycast(obo.transform.position, rayDirection, 1, LayerMask.GetMask("build"));
-            if (hit.collider != null)
-            {
-                Debug.Log("merging");
-                foreach (GameObject ap in bigboy[BBindex(hit.collider)])
-                {
-                    bigboy[old].AddLast(ap);
-                }
-                bigboy[BBindex(hit.collider)].Clear();
-            }
-            return true;
-
-        }
-
-
-        return false;
-    }
-    void merge()
-    {
 
     }
-    int BBindex(Collider2D collider)
-    {
-        foreach (LinkedList<GameObject> linkedList in bigboy)
-        {
-            foreach (GameObject go in linkedList)
-            {
-                if (go.GetComponent<Collider2D>() == collider)
-                {
-                    Debug.Log("Collider found in a LinkedList at index: " + bigboy.IndexOf(linkedList));
-                    return (bigboy.IndexOf(linkedList));
-                }
-            }
-        }
-
-        // If the collider is not found in any LinkedList
-        Debug.Log("Collider not found in any LinkedList.");
-        return -1;
-    }
+    
 }
-/*
-foreach (LinkedList<GameObject> lik in bigboy)
-{
-
-}
-*/
