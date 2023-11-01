@@ -19,21 +19,21 @@ public class rotate : MonoBehaviour
     void Update()
     {
         if (weee.rotae.eulerAngles.z == 0){
-            ss = "right";
+            ss = "Right";
         }
         if (weee.rotae.eulerAngles.z == 90)
         {
-            ss = "up";
+            ss = "Up";
         }
         if (weee.rotae.eulerAngles.z == 180)
         {
-            ss = "left";
+            ss = "Left";
         }
         if (weee.rotae.eulerAngles.z == 270)
         {
-            ss = "down";
+            ss = "Down";
         }
-        textR.text = "rotate " + ss;
+        textR.text = "Rotate " + ss;
 
     }
 }
