@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: -4649429372646105537}
   - component: {fileID: 534847174824281719}
   - component: {fileID: -6956972070378809625}
+  - component: {fileID: 7831883383836663801}
   m_Layer: 0
   m_Name: Square (11)
   m_TagString: Untagged
@@ -187,9 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefabe: {fileID: 8409560664742710113, guid: e1790a1566aaa47f9b6d6461dffdc278, type: 3}
-  spawnspeedM: 2
   tag: item
-  tag2: aaa
+  count: 0
 --- !u!61 &534847174824281719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,6 +262,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7831883383836663801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300744705166022144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6283bb33bcd37408bd83153fa52170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4776211741744614858
 GameObject:
   m_ObjectHideFlags: 0

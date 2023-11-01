@@ -11,6 +11,8 @@ TagManager:
   - seller
   - aaa
   - miner
+  - machine
+  - iron
   layers:
   - Default
   - TransparentFX

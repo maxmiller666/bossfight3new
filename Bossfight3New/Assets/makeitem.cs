@@ -55,5 +55,10 @@ public class makeitem : MonoBehaviour
 
         return false;
     }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("iron")) { 
+        }
+    }
 }
 
