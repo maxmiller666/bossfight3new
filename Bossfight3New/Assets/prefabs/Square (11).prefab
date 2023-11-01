@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a337084f4474bcd978fa4d0278e3aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabe: {fileID: 8409560664742710113, guid: e1790a1566aaa47f9b6d6461dffdc278, type: 3}
+  itemPrefabe: {fileID: 4854091203201454399, guid: c073d89affed140c391ed37ea27a23db, type: 3}
   tag: item
   count: 0
 --- !u!61 &534847174824281719

@@ -85,6 +85,7 @@ public class OnConveyer : MonoBehaviour
         {
 
             Destroy(gameObject, 0.3f);
+            particleSystem.Play();
         }
 
     }
@@ -106,6 +107,7 @@ public class OnConveyer : MonoBehaviour
         if (num == 0 && !turn)
         {
             Debug.Log("death");
+            particleSystem.Play();
             Destroy(gameObject, 0.3f);
         }
     }
