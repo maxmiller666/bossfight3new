@@ -13,6 +13,7 @@ public class create : MonoBehaviour
     public GameObject itemPrefab3;
     int itemNum = 0;
     private GameObject pop;
+
     //public GameObject[,] littleboy = new GameObject[15, 11];
 
     // Start is called before the first frame update
@@ -24,10 +25,7 @@ public class create : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pop.GetComponent<sell>().money >= 25)
-        {
-            Debug.Log("RICH");
-        }
+
         if (Input.GetKeyDown("r"))
         {
             rotae *= Quaternion.Euler(0, 0, 90);
@@ -74,8 +72,8 @@ public class create : MonoBehaviour
         spawnPosition.y = Mathf.Round(spawnPosition.y);
         
         Vector3 rayDirection = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * Vector2.right;
-        RaycastHit2D hit = Physics2D.Raycast(spawnPosition, rayDirection, 0.01f);
-        if (hit.collider == null || hit.collider.CompareTag("item"))
+        RaycastHit2D hit = Physics2D.Raycast(spawnPosition, rayDirection, 0.01f, LayerMask.GetMask("build"));
+        if (hit.collider == null)
         {
             if (pop.GetComponent<sell>().money >= 10)
             {

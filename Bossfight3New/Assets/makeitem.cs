@@ -7,6 +7,7 @@ public class makeitem : MonoBehaviour
     public GameObject itemPrefab;
     public float spawnspeed = 2.0f;
     private float timepassed = 0;
+    bool IHATENAMINGVARIABLRES;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class makeitem : MonoBehaviour
 
         
 
-        if (timepassed >= spawnspeed)
+        if (timepassed >= spawnspeed && IHATENAMINGVARIABLRES)
         {
             Spawn();
             timepassed = 0;
@@ -37,19 +38,13 @@ public class makeitem : MonoBehaviour
     bool ItemToTheRight()
     {
         Vector3 rayDirection = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z) * Vector2.right;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 1);
-
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, 1, LayerMask.GetMask("ConveyerItem"));
 
 
         if (hit.collider != null)
         {
-            
-
-            if (hit.collider.CompareTag("item"))
-            {
                 return true;
-                
-            }
+
         }
 
 
@@ -57,7 +52,8 @@ public class makeitem : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("iron")) { 
+        if (collision.gameObject.CompareTag("iron")) {
+            IHATENAMINGVARIABLRES = true;
         }
     }
 }

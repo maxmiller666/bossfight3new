@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8529172409238164582}
   - component: {fileID: 2279163658988010475}
-  - component: {fileID: 1395464005063163412}
-  - component: {fileID: 4139275145281914859}
+  - component: {fileID: 2036408903222091962}
+  - component: {fileID: 239248775324496380}
   m_Layer: 0
   m_Name: iron
-  m_TagString: Untagged
+  m_TagString: iron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1395464005063163412
+--- !u!61 &2036408903222091962
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &4139275145281914859
+--- !u!50 &239248775324496380
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

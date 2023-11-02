@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: -172639695036810651}
   - component: {fileID: -409109399914398498}
   - component: {fileID: 272132393699223305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Conveyer belt
   m_TagString: conveyer
   m_Icon: {fileID: 0}
