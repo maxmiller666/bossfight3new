@@ -6404,7 +6404,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -551, y: -194}
+=======
+  m_AnchoredPosition: {x: -907, y: -183}
+>>>>>>> 46b7a15e15291679a0ae4f0849f336b655541c01
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1391173122
@@ -9754,7 +9758,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 259, y: -201}
+=======
+  m_AnchoredPosition: {x: 163, y: -183}
+>>>>>>> 46b7a15e15291679a0ae4f0849f336b655541c01
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2004153778
@@ -9799,10 +9807,10 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VERSION 1.0
+  m_Text: VERSION 1.34.66
 --- !u!222 &2004153780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10608,7 +10616,7 @@ Transform:
   m_GameObject: {fileID: 2140936360}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -958, y: -543.56, z: 0}
+  m_LocalPosition: {x: -958.348, y: -543.246, z: 0}
   m_LocalScale: {x: 36.550003, y: -38.024998, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10645,3 +10653,26 @@ SceneRoots:
   - {fileID: 1128423618}
   - {fileID: 1092311843}
   - {fileID: 45058381}
+<<<<<<< HEAD
+=======
+  - {fileID: 1171993655}
+  - {fileID: 919229572}
+  - {fileID: 491039764}
+  - {fileID: 852203705}
+  - {fileID: 369361339}
+  - {fileID: 1012068070}
+  - {fileID: 314028790}
+  - {fileID: 1466855586}
+  - {fileID: 2056916163}
+  - {fileID: 111480275}
+  - {fileID: 477838573}
+  - {fileID: 1183672984}
+  - {fileID: 1205301894}
+  - {fileID: 213049047}
+  - {fileID: 205177558}
+  - {fileID: 281158463}
+  - {fileID: 1253057476}
+  - {fileID: 14683411}
+  - {fileID: 1633658726}
+  - {fileID: 1554039052}
+>>>>>>> 46b7a15e15291679a0ae4f0849f336b655541c01
